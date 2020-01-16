@@ -1,0 +1,24 @@
+[
+    {
+        "id": "${project.parent.artifactId}.extensionappss",
+        "description": "Text description of my app, not shown to regular user",
+        "extensionPoints": [
+            {
+                "id": "subApp.appsss",
+                "description": "Apps on the basic Apps App Home Page"
+            }
+        ],
+        "extensions": [            
+            {
+                "id": "${project.parent.artifactId}.newAddressss",
+                "extensionPointId": "patientHeader.secondLineFragments",
+                "extensionParams": {
+                    "fragment": "newAddressWidget",
+                    "patientId" : "{{patientId}}"
+                },
+                "icon": "icon-diagnosis",
+                "requiredPrivilege": "App: patient list"
+            }        
+        ]
+    }
+]
