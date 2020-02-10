@@ -67,6 +67,9 @@ public class MyAlertPageRequestMapper implements PageRequestMapper {
 			if (alertText.indexOf("/") == -1) { /// alert caused by something other than response
 				continue;
 			}
+			if (alert.getAlertRead()) {
+				continue;
+			}
 			patientName = (alertText.split("/"))[0];
 			patients += patientName + ", ";
 		}
